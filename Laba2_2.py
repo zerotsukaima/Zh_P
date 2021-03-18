@@ -5,11 +5,9 @@ n = int(input("Vvedite chislo shagov "))
 step = 1
 y = 1
 A = x ** step #задаем числитель
-B = 2 * 1 #попытка задать знаменатель
-C = 3 * B
-
+B = math.factorial(step) #попытка задать знаменатель
 while step <= n:
-    y += ((-1) ** step) * (x ** step) / math.factorial(step)
+    y += ((-1) ** step) * (A / B)
     step = step + 1
 print(y)
 #завести отдельно переменную Числитель и потом применять ее в примере, чтобы Числитель вызывать и домножать на себя

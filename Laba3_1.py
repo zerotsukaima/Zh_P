@@ -1,6 +1,6 @@
 s = input("Введите строку ")
 if s[len(s) - 1] != ".":
-    s = input("Введите строку ")
+    s = input("Введите строку с точкой ")
 print(len(s))
 p = 0
 l = 0
@@ -8,13 +8,27 @@ for i in s:
     if i == " ":
         p = p + 1
     l = p + 1
-count = 0
-for i in s:
-    if i == " ":
-        p = p + 1
-    #и тут сравниваем длину count с количеством max и min и присваиваем ему это значение
-    #будет вложенный if когда count снова будет равен 0 И снова начинаем работу цикла
-    # for для счета длины второго слова
 print(l)
-w = #задать слово и начать считать длину слов и выдавать результат самой большой длины и самой мелкой
-len(w)
+#print('i=', i)
+
+count = 0
+max = 0
+min = 3000
+for i in s:
+    print('i=', i)
+    print(s)
+    if i == '.':
+        count = count - 1
+    if i != ' ':
+        count = count + 1
+        print("count=", count)
+    else:
+        count = 0 #ошибка тут
+    if count > max:
+        max = count
+        print('max=', max)
+    if count > 0: # и тут
+        min = count
+        print('min=', min)
+print('max=', max)
+print('min=', min)
