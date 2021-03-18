@@ -4,6 +4,10 @@ x = float(input("Vvedite znachecnie X "))
 n = int(input("Vvedite chislo shagov "))
 step = 1
 y = 1
+A = x ** step #задаем числитель
+B = 2 * 1 #попытка задать знаменатель
+C = 3 * B
+
 while step <= n:
     y += ((-1) ** step) * (x ** step) / math.factorial(step)
     step = step + 1
