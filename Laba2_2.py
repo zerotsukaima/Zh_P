@@ -1,15 +1,27 @@
-import math
-from decimal import Decimal
-x = float(input("Vvedite znachecnie X "))
-n = int(input("Vvedite chislo shagov "))
-step = 1
+x = float(input("Введите значение X "))
+n = int(input("Введите число шагов "))
 y = 1
-A = x ** step #задаем числитель
-B = math.factorial(step) #попытка задать знаменатель
-while step <= n:
-    y += ((-1) ** step) * (A / B)
-    step = step + 1
+a = 0
+b = 1
+# шаг1: числитель и q его степень
+q = (n - (n - 1))
+if n == 0:
+    x = 1
+elif n == 1:
+   x = x
+while n >= 2:
+    a = x * (x ** q)
+    q = q + 1
+    n = n - 1
+print("Chislitel", a)
+# шаг2: знаменатель не верно считает факториал сейчас
+for i in range(2, n + 1):
+    #print("Номер шага", i)
+    b = b * i
+print('factorial', b)
+# шаг3: весь пример
+step = n
+while step >= n: # пока шаг больше или равен числу шагов от юзера, то решает
+    y += ((-1) ** step) * (a / b)
+    step = step - 1 #каждый раз уменьшая шаг
 print(y)
-#завести отдельно переменную Числитель и потом применять ее в примере, чтобы Числитель вызывать и домножать на себя
-#со знаменателем тоже самое, завести переменную Знаменатель и выполнять ее домножение
-#в итоговой формуле будет y += Числитель/Знаменатель
