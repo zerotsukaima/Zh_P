@@ -32,3 +32,4 @@ for i in s:
         print('min=', min)
 print('max=', max)
 print('min=', min)
+#в этом коде ошибка, минимум меньше 2 не считает вообще
