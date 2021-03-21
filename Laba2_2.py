@@ -9,15 +9,18 @@ if n == 0:
     x = 1
 elif n == 1:
    x = x
-while n >= 2:
-    a = x * (x ** q)
-    q = q + 1
-    n = n - 1
-print("Chislitel", a)
+   print("числитель когда степень 1", x)
+else:
+    while n >= 2:
+        a = x * (x ** q)
+        q = q + 1
+        n = n - 1
+        print("Chislitel", a)
 # шаг2: знаменатель не верно считает факториал сейчас
 for i in range(2, n + 1):
     #print("Номер шага", i)
     b = b * i
+    i += 1
 print('factorial', b)
 # шаг3: весь пример
 step = n
