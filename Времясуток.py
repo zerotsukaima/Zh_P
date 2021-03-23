@@ -10,5 +10,5 @@ elif a >= 10 and a < 16:
     print("День")
 elif a >= 16 and a < 22:
     print("Вечер")
-elif a >= 22 and a < 4:
+elif a >= 22 or a < 4: #исправила and на or
     print("Ночь")
